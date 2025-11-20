@@ -26,7 +26,6 @@ const guardarArchivo = () => {
   fs.writeFileSync(FILE_PATH, JSON.stringify(vehiculos, null, 2));
 };
 
-// Función para formatear como tabla JSON
 const formatearTabla = () => {
   return JSON.stringify({
     tabla: vehiculos.map(v => ({
@@ -74,7 +73,6 @@ app.post('/vehiculos', (req, res) => {
   res.send(JSON.stringify(nuevoVehiculo, null, 2));
 });
 
-// PUT actualizar vehículo por ID
 app.put('/vehiculos/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const { marca, modelo, anio, placa } = req.body;
@@ -91,7 +89,6 @@ app.put('/vehiculos/:id', (req, res) => {
   res.send(JSON.stringify(vehiculo, null, 2));
 });
 
-// DELETE vehículo por ID
 app.delete('/vehiculos/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const index = vehiculos.findIndex(v => v.id === id);
