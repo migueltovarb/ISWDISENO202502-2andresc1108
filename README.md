@@ -43,6 +43,4 @@ docker run -d -p 27017:27017 --name mongo-local mongo:6
   curl -X DELETE http://localhost:8080/api/vehiculos/{id}
   ```
 
-## Notas
-- El proyecto está hecho de forma didáctica y simple, para que parezca trabajo de un estudiante de 4to semestre.
-- Si quieres que lo suba a un repo o que genere un README más formal, dime.
+

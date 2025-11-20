@@ -20,27 +20,23 @@ public class VehiculoController {
         this.repository = repository;
     }
 
-    // CREATE
     @PostMapping
     public ResponseEntity<Vehiculo> crearVehiculo(@Valid @RequestBody Vehiculo vehiculo) {
         Vehiculo saved = repository.save(vehiculo);
         return ResponseEntity.ok(saved);
     }
 
-    // READ - todos
     @GetMapping
     public List<Vehiculo> obtenerVehiculos() {
         return repository.findAll();
     }
 
-    // READ - por id
     @GetMapping("/{id}")
     public ResponseEntity<Vehiculo> obtenerPorId(@PathVariable String id) {
         Optional<Vehiculo> v = repository.findById(id);
         return v.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // UPDATE
     @PutMapping("/{id}")
     public ResponseEntity<Vehiculo> actualizarVehiculo(@PathVariable String id, @Valid @RequestBody Vehiculo v) {
         Optional<Vehiculo> opt = repository.findById(id);
@@ -57,7 +53,6 @@ public class VehiculoController {
         return ResponseEntity.ok(updated);
     }
 
-    // DELETE
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarVehiculo(@PathVariable String id) {
         if (!repository.existsById(id)) {

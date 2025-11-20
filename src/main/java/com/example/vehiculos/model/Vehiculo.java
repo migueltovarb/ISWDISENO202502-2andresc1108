@@ -33,7 +33,7 @@ public class Vehiculo {
         this.placa = placa;
     }
 
-    // Getters y setters (simples para que parezca trabajo de estudiante)
+    // Getters y setters 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 

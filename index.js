@@ -5,7 +5,7 @@ app.use(express.json());
 
 const FILE_PATH = './vehiculos.json';
 
-// Cargar vehículos desde archivo o iniciar con default
+// Cargar vehículos desde archivo 
 let vehiculos = [];
 if (fs.existsSync(FILE_PATH)) {
   const data = fs.readFileSync(FILE_PATH, 'utf8');
@@ -39,9 +39,7 @@ const formatearTabla = () => {
   }, null, 2);
 };
 
-// ------------------- RUTAS -------------------
 
-// GET todos los vehículos
 app.get('/vehiculos', (req, res) => {
   console.table(vehiculos);
   res.setHeader('Content-Type', 'application/json');
