@@ -1,0 +1,15 @@
+{
+  "name": "vehiculos-api",
+  "version": "1.0.0",
+  "description": "Proyecto simple de ejemplo que implementa un CRUD de vehículos usando Java + Spring Boot + MongoDB. Pensado para ejecutarse desde la terminal (VSCode) con Maven.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
