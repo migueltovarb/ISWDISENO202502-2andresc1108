@@ -1,7 +1,18 @@
-target/
-.idea/
+# Carpeta de compilación
+/target/
+
+# Archivos de IDE
 *.iml
-.classpath
-.project
-.settings/
+/.idea/
+/.vscode/
+
+# Archivos de logs
 *.log
+
+# Archivos del sistema
+.DS_Store
+
+# Archivos compilados
+*.class
+*.jar
+*.war
